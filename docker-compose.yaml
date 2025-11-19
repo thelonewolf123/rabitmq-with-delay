@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: rabbitmq-delay
     ports:
-      - "5672:$RABBITMQ_PORT"
-      - "15672:$RABBITMQ_UI_PORT" # Management UI
+      - "5672:5672"
+      - "15672:15672" # Management UI
     environment:
       RABBITMQ_DEFAULT_USER: $RABBITMQ_DEFAULT_USER
       RABBITMQ_DEFAULT_PASS: $RABBITMQ_DEFAULT_PASS
